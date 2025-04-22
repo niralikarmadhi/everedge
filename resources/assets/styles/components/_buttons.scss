@@ -1,0 +1,197 @@
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.btn {
+  padding: 17px 3px 17px 17px;
+  padding-right: 56px;
+  font-size: $bodyM;
+  letter-spacing: -0.16px;
+  font-weight: 500;
+  font-family: "DM Sans";
+  line-height: 1;
+  color: $secondary !important;
+  border-radius: 29px;
+  min-width: 134px;
+  @include generate-transition(all, 400ms, ease);
+  overflow: hidden;
+  border: 1px solid $secondary !important;
+  position: relative;
+  z-index: 1;
+  &.btnA {
+    padding: 17px 80px 17px 30px;
+  }
+  &.unavailable-button {
+    @include media-breakpoint-down(md) {
+      padding-right: 17px;
+    }
+  }
+
+  // height: 52px;
+  svg {
+    color: $primary;
+  }
+
+  .btn-arrow {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    border-radius: 29px;
+    background-color: $secondary;
+    position: absolute;
+    right: 4px;
+    top: 3px;
+    @include generate-transition(all, 400ms, ease);
+  }
+
+  &:hover {
+    // padding: 18px 3px 18px 17px;
+    span {
+      opacity: 0;
+      @include generate-transition(all, 400ms, ease);
+    }
+
+    .btn-arrow {
+      margin-left: 0 !important;
+      width: calc(100% - 8px);
+    }
+  }
+
+  &.prev-btn {
+    padding: 18px 17px 18px 52px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+
+    .btn-arrow {
+      right: auto;
+      left: 4px;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    padding: 18px 10px !important;
+    min-width: 290px;
+  }
+
+  &.btn-outline-primary {
+    border: 1px solid $primary !important;
+    color: $primary !important;
+    position: relative;
+
+    svg {
+      color: $secondary;
+    }
+
+    &:hover {
+      background: none;
+    }
+
+    .btn-arrow {
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+      border-radius: 29px;
+      background-color: $primary;
+      position: absolute;
+      right: 4px;
+      @include generate-transition(all, 400ms, ease);
+    }
+
+    &:hover {
+      // padding: 18px 3px 18px 17px;
+      span {
+        opacity: 0;
+        @include generate-transition(all, 400ms, ease);
+      }
+
+      .btn-arrow {
+        margin-left: 0 !important;
+        width: calc(100% - 8px);
+      }
+    }
+  }
+
+  &.btn-md {
+    min-width: 165px !important;
+  }
+
+  &.btn-lg {
+    min-width: 209px !important;
+  }
+}
+
+.btn-primary-bg {
+  padding: 20px 10px;
+  text-align: center;
+  background-color: $primary;
+  min-width: 220px;
+  border-radius: 29px;
+  color: $secondary;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.16px;
+  font-family: "DM Sans";
+  border: 1px solid transparent;
+  @include generate-transition(all, 500ms, ease);
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $primary;
+  }
+
+  &.btn-outline-primary-bg {
+    color: $primary;
+    background-color: transparent;
+    border: 1px solid $primary;
+
+    &:hover {
+      color: $secondary;
+      background-color: $primary;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+a.btn {
+  display: inline-flex;
+}
+
+.planter--submit {
+  background-color: $primary;
+  max-width: 200px;
+  color: $white;
+}
+
+// .wpcf7-submit.btn-outline-primary {
+//   position: relative;
+//   &:before{
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     right: 0px;
+//     top: 0px;
+//     height: 44px;
+//     width: 44px;
+//     background-color: $primary;
+//     background-image: url('/wp-content/themes/curious_boilerplate/assets/images/icons/arrow-right.svg');
+//     background-repeat: no-repeat;
+//   }
+// }
+
+.disable-button {
+  opacity: 0.5;
+  pointer-events: none;
+}

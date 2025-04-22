@@ -1,0 +1,11 @@
+
+
+.menu--sidebar{
+  a{
+    color: $black;
+
+    &.active{
+      color: red;
+    }
+  }
+}

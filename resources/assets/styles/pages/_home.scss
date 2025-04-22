@@ -1,0 +1,54 @@
+.hero-section {
+  .top-center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero-prefix {
+    line-height: 18px;
+  }
+  .hero-title {
+    font-size: 100px;
+    line-height: 90px;
+  }
+  .bg--layer {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(1, 1, 1, 0),
+      rgba(0, 0, 0, 0)
+    );
+  }
+}
+
+.icon--slider {
+  .icon-card {
+    padding-left: 80px;
+    .icon {
+      height: 28px;
+    }
+  }
+}
+.left-right-section {
+  .img-part {
+    height: 540px;
+  }
+  .logo-img {
+    width: 256px;
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.installation-section {
+  .img-part {
+    height: 700px;
+  }
+  .installation-card {
+    padding: 30px 25px;
+    .icon_img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+}

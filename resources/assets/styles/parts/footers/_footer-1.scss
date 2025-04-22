@@ -1,0 +1,26 @@
+
+
+.wrap--footer-1{
+  margin-top: -140px;
+  padding-top: 160px;
+}
+
+.footer-1{
+
+  img{
+    width: calc(50% - 20px);
+  }
+
+  .wrap--newsletter{
+    .default--button{
+      padding: 8px 15px;
+      min-width: 100px;
+      margin-left: -5px;
+    }
+
+    .input--default{
+      width: calc(100% - 130px);
+    }
+  }
+
+}

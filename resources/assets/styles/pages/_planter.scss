@@ -1,0 +1,112 @@
+
+
+
+
+.group-answer-square-image,
+.group-answer-rect-image,
+.group-answer-round-image,
+.group-answer-l-shape-image
+{
+    position: relative;
+    div{
+        text-align: center;
+        width: 50px;
+        color: $green;
+    }
+}
+
+.group-answer-square-image{
+    .height{
+        position: absolute;
+        top: 48%;
+        left: 12%;
+    }
+    
+    .width{
+        position: absolute;
+        bottom: 21%;
+        left: 24%;
+        @include media-breakpoint-down(lg) {
+            left: 30%;
+        }
+    }
+}
+
+.group-answer-rect-image{
+    .width_rect{
+        position: absolute;
+        bottom: 19%;
+        left: 56%;
+        @include media-breakpoint-down(lg) {
+            left: 69%;
+        }
+    }
+
+    .height_rect{
+        position: absolute;
+        top: 43%;
+        left: 7%;
+    }
+
+    .length{
+        position: absolute;
+        bottom: 25%;
+        left: 25%;
+    }
+}
+
+.group-answer-round-image{
+
+    .diameter{
+        left: 37%;
+        position: absolute;
+        bottom: 15%;
+    }
+
+    .height_round{
+        position: absolute;
+        top: 49%;
+        left: 12%;
+    }
+}
+
+
+.group-answer-l-shape-image{
+    .width_1{
+        position: absolute;
+        top: 30%;
+        left: 15%;
+    }
+
+    .length_1{
+        position: absolute;
+        top: 64%;
+        left: 19%;
+    }
+
+    .width_2{
+        position: absolute;
+        top: 30%;
+        left: 58%;
+        @include media-breakpoint-down(lg) {
+            left: 73%;
+        }
+    }
+
+    .length_2{
+        position: absolute;
+        top: 64%;
+        left: 51%;
+        @include media-breakpoint-down(lg) {
+            left: 63%;
+        }
+    }
+
+    .height_l_shape{
+        position: absolute;
+        top: 45%;
+        left: 7%;
+    }
+
+
+}

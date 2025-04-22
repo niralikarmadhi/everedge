@@ -1,0 +1,333 @@
+.container {
+  max-width: 1440px !important;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+p.error-message {
+    margin-top: 5px;
+    color: #ff0000;
+    font-size: 12px;
+    display: block;
+}
+
+// . {
+//     -webkit-box-orient: vertical;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 1;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: normal;
+// }
+
+// .2 {
+//     -webkit-line-clamp: 2;
+// }
+
+// .3 {
+//     -webkit-line-clamp: 3;
+// }
+
+// .4 {
+//     -webkit-line-clamp: 4;
+// }
+// .5 {
+//     -webkit-line-clamp: 5;
+// }
+// .6 {
+//     -webkit-line-clamp: 6;
+// }
+
+.-mx-3{
+  margin: 0 -13px;
+}
+
+.theme-radius{
+    border-radius: 10px;
+}
+.box-shadow{
+    box-shadow: 0px 10px 36px #00000029 !important;
+}
+.line-height-1{
+    line-height: 1;
+}
+
+.rounded-full{
+    border-radius: 999px;
+}
+.border-bottom{
+    border-bottom: 1px solid rgba($primary, 20%) !important;
+}
+.border-top{
+  border-top: 1px solid rgba($primary, 16%) !important;
+}
+.card-shadow{
+  box-shadow: 0px 3px 6px #00000029;
+}
+.card-img-radius{
+  border-radius: 10px 10px 0 0;
+}
+.card-body-radius{
+  border-radius: 0 0 10px 10px;
+}
+// text transform
+.text-transform-none{
+    text-transform: none;
+}
+
+// letter-spacing
+.text-spacing{
+  letter-spacing: -0.14px;
+}
+// slick-overflow
+.slick-overflow{
+    overflow: hidden;
+    .slick-slider{
+        .slick-list{
+            overflow: visible;
+        }
+    }
+}
+.scroll-hidden {
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+  }
+
+// bg green
+.bg-green-img{
+    background: url("/wp-content/themes/curious_boilerplate/assets/images/home/why-chhose-bg-img.png") $primary no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.theme-accordion {
+    .accordion-item {
+      background-color: $secondary;
+      color: $white;
+      border: 0;
+      margin-bottom: 11px;
+      padding: 29px 22px 29px 64px;
+      box-shadow: 0px 0px 16px #00000029;
+      border-radius: 10px;
+        
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+      @include media-breakpoint-down(md) {
+        margin-bottom: 12px;
+        padding: 30px 25px 34px;
+      }
+  
+      .accordion-button {
+        background-color: transparent;
+        color: $white;
+        padding: 0;
+        font-size: 28px;
+        letter-spacing: -0.28px;
+        @include generate-transition(all, 0.5s, ease);
+        @include media-breakpoint-down(md) {
+          font-size: 30px;
+          letter-spacing: -1px;
+          line-height: 34px;
+          span{
+            max-width: 206px;
+          }
+        }
+  
+        &[aria-expanded="true"] {
+          padding-bottom: 25px;
+          border-bottom: 0px;
+  
+          @include media-breakpoint-down(md) {
+            padding: 0;
+            margin-bottom: 30px;
+          }
+        }
+  
+        &::after {
+          width: 44px;
+          height: 44px;
+          background-color: $primary;
+          text-align: center;
+          background-image: url("/wp-content/themes/curious_boilerplate/assets/images/icons/plus.svg");
+          background-position: center;
+          background-size: 18px;
+          border-radius: 100%;
+          @include media-breakpoint-down(md){
+              width: 34px;
+              height: 34px;
+              background-size: 16px;
+          }
+        }
+  
+        &:not(.collapsed) {
+          &::after {
+            transform: rotate(45deg);
+          }
+        }
+      }
+  
+      // .accordion-collapse {
+      //   &.show {
+      //     .accordion-body{
+      //       padding-bottom: 26px !important;
+    
+      //       @include media-breakpoint-down(md) {
+      //         padding-bottom: 10px !important;
+      //       }
+      //     }
+      //   }
+      // }
+  
+      .accordion-body {
+        p{
+        line-height: 1.9;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+
+
+
+
+
+
+
+.story-box {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.8;
+    box-shadow: 0 0 36px rgba(113, 113, 113, 0.1);
+    z-index: 10;
+    @include media-breakpoint-up(md) {
+        width: 50%;
+    }
+
+    h3 {
+        color: $gray;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e9e9e9;
+        font-weight: 500;
+    }
+}
+
+/* END story section */
+
+.box-large-image {
+    width: 55%;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+        position: relative !important;
+        height: 350px !important;
+    }
+}
+
+.right-in-box {
+    @include media-breakpoint-down(md) {
+        padding: 0px;
+    }
+
+    .box-large-image {
+        left: 0;
+    }
+
+    .story-box {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+.left-in-box {
+    @include media-breakpoint-down(md) {
+        padding: 0px;
+    }
+
+    .box-large-image {
+        right: 0;
+    }
+
+    .story-box {
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+
+.single-case_studies_item {
+  .about-image-slider {
+    position: relative !important;
+    .slick-arrow-bottom-right .slick-arrow {
+      right: 80px !important;
+    }
+    .slick-arrow-bottom-right .slick-prev {
+      right: 130px !important;
+    }
+  }
+}
+
+.desktopHeight100 {
+  height: 100vh;
+  position: relative;
+  .project-detail-card {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+
+.zindex {
+  z-index: 10;
+  .closeThankyou {
+    border-radius: 50%;
+    background-color: #F5F3F0;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include generate-transition(all, 0.5s, ease);
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+}
+
+body .centeredButton {
+  padding: 20px 10px !important;
+  border-color: $primary !important; 
+}
+.top-left-center{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.row35{
+  margin-inline: -35px ;
+  &>*{
+    padding-inline: 35px ;
+  }
+}
+.row8{
+  margin-inline: -8px;
+  &>*{
+    padding-inline: 8px;
+  }
+}

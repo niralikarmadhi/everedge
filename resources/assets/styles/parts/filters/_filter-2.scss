@@ -1,0 +1,37 @@
+
+
+
+.filter{
+
+  .filter-dropdown{
+    background: $white;
+    padding: 25px;
+    position: absolute;
+    top: 35px;
+    left: 15px;
+    z-index: 99;
+    white-space: nowrap;
+    transition: 0.4s all ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0px 13px 20px #00000029;
+
+    &.active{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--trigger{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s all ease-in-out;
+    &.active{
+      transform: rotate(45deg);
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 46" width="48" height="46">
+	<title>Ellipse 266-svg</title>
+	<style>
+		.s0 { fill: #5d7246 } 
+		.s1 { fill: none;stroke: #f5f3f0;stroke-linecap: round;stroke-width: 1.8 } 
+	</style>
+	<path id="Ellipse_266" class="s0" d="m8.6 38.7c-8.6-8.6-8.6-22.5 0-31.1 8.6-8.6 22.5-8.6 31.1 0 8.6 8.6 8.6 22.5 0 31.1-8.6 8.6-22.5 8.6-31.1 0z"/>
+	<g id="Group_2889">
+		<path id="Line_610" class="s1" d="m24.2 13.9v18.6"/>
+		<path id="Line_611" class="s1" d="m14.9 23.1h18.6"/>
+	</g>
+</svg>

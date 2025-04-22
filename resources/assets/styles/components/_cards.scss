@@ -1,0 +1,181 @@
+
+.card-hover{
+    img{
+        transform: scale(1);
+        transition: 0.4s all ease-in-out;
+    }
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
+
+// featured card
+.featured-card{
+    border-radius: 10px;
+    &.card-hover{
+        &:hover{
+            .featured-body{
+                // box-shadow: inset 0 0 34px rgba($primary, 60%) !important;
+            }
+            .featured-tag{
+                background-color: $primary !important;
+            }
+        }
+    }
+    .featured-img{
+        height: 363px;
+        @include media-breakpoint-down(lg) {
+            height: 276px;
+        }
+        .featured-tag{
+            top: 20px;
+            height: 102px;
+            width: 102px;
+            right: 28px;
+            @include media-breakpoint-down(lg) {
+                height: 60px;
+                width: 60px;
+            }
+            h5{
+                line-height: 0.9;
+                @include media-breakpoint-down(lg) {
+                    font-size: 18px;
+                }
+            }
+            span{
+                letter-spacing: -0.17px;
+                line-height: 1.2;
+                @include media-breakpoint-down(lg) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .featured-body{
+        padding: 25px;
+        h4, h3{
+            font-size: 19px;
+            @include media-breakpoint-down(lg) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.choose-card{
+    border-radius: 10px;
+    &.card-hover{
+        &:hover{
+        }
+    }
+    .card-img{
+        height: 230px;
+        @include media-breakpoint-down(lg) {
+            height: 174px;
+        }
+    }
+    .card-body{
+        padding: 34px 10px;
+        @include media-breakpoint-down(lg) {
+            padding: 25px 10px;
+            p{
+                font-size: 13px;
+            }
+        }
+        h3{
+            font-size: 39px;
+            @include media-breakpoint-down(lg) {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+
+.resources-card{
+    box-shadow: 0px 3px 36px #00000012 !important;
+    @include media-breakpoint-down(lg) {
+        box-shadow: 0px 3px 36px #00000012 !important;
+    }
+    margin: 0 6px;
+    .resources-img{
+        height: 240px;
+        @include media-breakpoint-down(lg) {
+            height: 190px;
+        }
+    }
+    .resources-tag{
+        top: 15px;
+        right: 18px;
+        line-height: normal;
+        background-color: #6D5C4B;
+        border-radius: 13px;
+        min-width: 70px;
+        padding: 6px 0 !important;
+
+        @include media-breakpoint-down(md) {
+            white-space: nowrap;  /* Prevents the text from wrapping */
+            overflow: hidden;     /* Hides the overflow */
+            text-overflow: ellipsis; /* Adds the "..." */
+            width: 70px;
+            padding: 6px 4px!important;
+        }
+    }
+    .card-body{
+        @include media-breakpoint-down(lg) {
+            max-height: 240px;
+            padding: 28px 20px 40px 20px !important;
+        }
+        h3{
+            font-size: 23px;
+            @include media-breakpoint-down(lg) {
+                font-size: 27px;
+            }
+        }
+        p{
+            font-size: 13px;
+        }
+        .card-arrow-btn{
+            height: 44px;
+            width: 44px;
+        }
+    }
+    &.card-hover{
+        &:hover{
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+            .card-body{
+                // box-shadow: inset 0 0 34px rgba($primary, 60%) !important;
+            }
+            .card-arrow-btn{
+                background-color: #6D5C4B !important;
+                transform: translateX(5px);
+            }
+        }
+    }
+}
+
+.team-card{
+  border-radius: 10px;
+  .team-img{
+    height: 35vh;
+  }
+  .team-body{
+    padding: 24px 28px 20px;
+    @include media-breakpoint-down(md){
+      padding: 24px 24px 30px;
+    }
+  }
+  .btn-arrow{
+    color: $primary;
+    @include generate-transition(all, 500ms, ease);
+  }
+  &:hover{
+    cursor: initial;
+    
+    .btn-arrow{
+      color: $gray;
+    }
+  }
+}

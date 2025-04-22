@@ -1,0 +1,138 @@
+
+
+
+
+.input--withIcon{
+  position: relative;
+
+    .input-icon {
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      right: 15px;
+      top: 0px;
+      bottom: 0px;
+      margin: auto 0px;
+  }
+
+}
+
+
+
+ .accordion--block {
+   margin-bottom: 25px;
+   background-color: $white;
+   border-radius: 0.25rem;
+
+         @include media-breakpoint-down(xs) {
+            width: 100%;
+         }
+           .accordion--row {
+
+             cursor: pointer;
+
+
+            }
+          .accordion--title {
+            padding: 25px 90px 25px 35px;
+            font-size: 24px;
+            font-weight: 500;
+            position: relative;
+            @include media-breakpoint-down(md) {
+              font-size: 18px;
+            }
+
+            @include generate-transition(all, 500ms, ease);
+
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+
+          .accordion--text {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+
+            .sub--text {
+              padding-top: 15px;
+              padding-bottom: 35px;
+              padding-left: 35px;
+              padding-right: 35px;
+              font-size: 14px;
+              line-height: 1.9;
+              ul {
+                width: 100%;
+              }
+
+              .sub--text__section {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding-top: 20px;
+                padding-bottom: 10px;
+
+                &:first-child {
+                  padding-top: 0;
+                }
+              }
+            }
+          }
+
+          &.active, &.open {
+
+            .accordion--title {
+
+              .icon {
+
+              content: "";
+              position: absolute;
+              right: 35px;
+              top: 30%;
+              color: $green;
+              line-height: 0px;
+              text-align: center;
+              font-weight: 100;
+              text-indent: 0px;
+              transform: rotate(0deg);
+              @include generate-transition(all, 300ms, ease);
+              img {
+                width: 80%;
+              }
+              }
+
+            }
+
+            .accordion--text {
+
+              max-height: 5000px;
+              transition: max-height 1s ease-in-out;
+              overflow: scroll;
+              -ms-overflow-style: none;
+              .sub--text {
+                  margin-top: 0px;
+              }
+
+              &::-webkit-scrollbar {
+                display: none;
+              }
+            }
+          }
+
+          .accordion--title {
+            .icon {
+              content: "";
+              position: absolute;
+              right: 35px;
+              top: 30%;
+              color: $green;
+              line-height: 0px;
+              text-align: center;
+              font-weight: 100;
+              text-indent: 0px;
+              transform: rotate(45deg);
+              @include generate-transition(all, 300ms, ease);
+              img {
+                width: 80%;
+              }
+            }
+          }
+        }

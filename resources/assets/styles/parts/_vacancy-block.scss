@@ -1,0 +1,77 @@
+
+
+.enquiry-modal{
+    .modal {
+        .modal-dialog {
+            max-width: 700px;
+        }
+        .contact-form {
+            max-width: 430px;
+            margin: 0 auto;
+            label {
+                color: $white;
+                margin-bottom: 6px;
+            }
+        }
+
+        .modal-content {
+            border: none;
+            border-radius: 5px;
+            @include media-breakpoint-down(md) {
+                padding:30px 20px;
+            }
+        }
+        .enquiry-bg{
+            height: 400px;
+            bottom: -34px;
+            width: 220%;
+            right: -134px;
+            left: auto !important;
+        }
+    }
+
+    .modal-times{
+      background: $white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      line-height: 52px;
+      text-align: center;
+
+      i{
+        color: $black;
+        font-size: 24px;
+        display: inline-block;
+      }
+    }
+}
+
+.career-content {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+   // -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+
+    p {
+        margin-bottom: 25px;
+    }
+
+    &.open {
+        display: block;
+        margin-bottom: 0px !important;
+    }
+}
+
+.button--more{
+  cursor: pointer;
+
+  &:not(.show) span:last-child {
+      display: none;
+  }
+
+  &.show span:first-child {
+      display: none;
+  }
+}

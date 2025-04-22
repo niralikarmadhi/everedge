@@ -1,0 +1,165 @@
+footer {
+    margin-top: 66px;
+
+    // overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -90px;
+        left: 0;
+        width: 100%;
+        height: 94px;
+        background: url("/wp-content/themes/curious_boilerplate/assets/images/dividers/footer-divider.png") no-repeat;
+        background-size: cover;
+
+        @include media-breakpoint-down(sm) {
+            background: url("/wp-content/themes/curious_boilerplate/assets/images/dividers/mobile-footer-divivder.png") no-repeat;
+            background-position: top;
+            top: -68px;
+            background-size: cover !important;
+        }
+    }
+
+    .instagram-info {
+        @include media-breakpoint-down(lg) {
+            svg {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+
+    .footer-text {
+        @include media-breakpoint-down(md) {
+            h3 {
+                margin-top: 5px;
+                color: $secondary;
+                font-size: 23px !important;
+            }
+        }
+    }
+
+    .top-footer {
+        .footer-slider {
+            .card-hover {
+                border-radius: 8px;
+            }
+
+            img {
+                height: 209px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                img {
+                    height: 120px;
+                }
+            }
+
+            .slick-slide {
+                // &:first-child{
+                //     padding-left: 0;
+                // }
+                padding: 0 7px;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 0 3px;
+                }
+            }
+        }
+    }
+
+    .main-footer {
+        @include media-breakpoint-down(lg) {
+            h2 {
+                font-size: 52px;
+            }
+        }
+
+        .contact-details {
+            @include media-breakpoint-down(lg) {
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            &:hover {
+                .icon-box {
+                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+                }
+            }
+
+            .icon-box {
+                background-color: rgba(#A7A29C, 0.1);
+                height: 48px;
+                width: 48px;
+                border: 2px solid transparent;
+                border-radius: 100%;
+                margin-right: 20px;
+
+                svg {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .britain-logo {
+            width: 140px;
+        }
+    }
+
+    .footer-social-icon {
+        a {
+            &:hover {
+                transform: translateY(-6px);
+            }
+        }
+    }
+
+    .footer-menu-links {
+        @include media-breakpoint-down(lg) {
+            row-gap: 18px;
+            column-gap: 42px;
+        }
+
+        a {
+            position: relative;
+            letter-spacing: -0.14px;
+            margin-left: 27px;
+            padding-bottom: 2px;
+            font-weight: 500;
+
+            @include media-breakpoint-down(lg) {
+                margin-left: 0;
+                font-size: 17px;
+                letter-spacing: -0.17px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 1px;
+                background-color: rgba($white, 0.5);
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                color: $white;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.page-template-account{
+    footer{
+        display: none;
+    }
+}

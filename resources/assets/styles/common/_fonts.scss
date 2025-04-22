@@ -1,0 +1,86 @@
+ //$fontsLocation: "../../fonts/";
+$fontsLocation: '/wp-content/themes/curious_boilerplate/assets/fonts/'; // on Build
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url($fontsLocation + 'DMSans-Bold.eot');
+  src: url($fontsLocation + 'DMSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url($fontsLocation + 'DMSans-Bold.woff2') format('woff2'),
+    url($fontsLocation + 'DMSans-Bold.woff') format('woff'),
+    url($fontsLocation + 'DMSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url($fontsLocation + 'DMSans-Italic.eot');
+  src: url($fontsLocation + 'DMSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url($fontsLocation + 'DMSans-Italic.woff2') format('woff2'),
+    url($fontsLocation + 'DMSans-Italic.woff') format('woff'),
+    url($fontsLocation + 'DMSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url($fontsLocation + 'DMSans-MediumItalic.eot');
+  src: url($fontsLocation + 'DMSans-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url($fontsLocation + 'DMSans-MediumItalic.woff2') format('woff2'),
+    url($fontsLocation + 'DMSans-MediumItalic.woff') format('woff'),
+    url($fontsLocation + 'DMSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url($fontsLocation + 'DMSans-Medium.eot');
+  src: url($fontsLocation + 'DMSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url($fontsLocation + 'DMSans-Medium.woff2') format('woff2'),
+    url($fontsLocation + 'DMSans-Medium.woff') format('woff'),
+    url($fontsLocation + 'DMSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url($fontsLocation + 'DMSans-BoldItalic.eot');
+  src: url($fontsLocation + 'DMSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url($fontsLocation + 'DMSans-BoldItalic.woff2') format('woff2'),
+    url($fontsLocation + 'DMSans-BoldItalic.woff') format('woff'),
+    url($fontsLocation + 'DMSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url($fontsLocation + 'DMSans-Regular.eot');
+  src: url($fontsLocation + 'DMSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url($fontsLocation + 'DMSans-Regular.woff2') format('woff2'),
+    url($fontsLocation + 'DMSans-Regular.woff') format('woff'),
+    url($fontsLocation + 'DMSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DINCond';
+  src: url($fontsLocation + 'DINCond-Black.eot');
+  src: url($fontsLocation + 'DINCond-Black.eot?#iefix') format('embedded-opentype'),
+    url($fontsLocation + 'DINCond-Black.woff2') format('woff2'),
+    url($fontsLocation + 'DINCond-Black.woff') format('woff'),
+    url($fontsLocation + 'DINCond-Black.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

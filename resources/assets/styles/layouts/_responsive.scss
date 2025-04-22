@@ -1,0 +1,37 @@
+body#tinymce {
+  margin: 13px !important;
+}
+
+
+
+
+@include media-breakpoint-down(lg) {
+
+  .wpcf7-list-item-label{
+    line-height: 140%;
+  }
+
+  .prize-counters-btns{
+    button{
+      font-family: initial;
+      line-height: 9px;
+    }
+  }
+
+  .cartTriggerMobile{
+    position: absolute;
+    right: 70px;
+  }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1400px){
+  .single_variation_wrap,
+  .place-order,.filter-block,.product-info-block{
+      button{
+        max-width: 100%;
+        min-width: 140px !important;
+      }
+    }
+}

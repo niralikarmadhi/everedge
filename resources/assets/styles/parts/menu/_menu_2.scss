@@ -1,0 +1,155 @@
+
+
+
+/* mega menu css */
+.custom-mega-menu {
+    background-color: $white;
+    position: fixed;
+    left: 0;
+    top: 125px;
+    width: 100%;
+    z-index: 999;
+    transition: 0.4s all ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 1px solid rgba(31,33,51,0.1);
+
+    @include media-breakpoint-up(lg) {
+        padding: 2rem 0px !important;
+
+        .card-with-inner-body {
+            .card-body {
+                padding: 20px;
+
+                .card-title {
+                    margin-bottom: 15px;
+                }
+            }
+
+            img {
+                height: 320px;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        top: 0px;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+
+      .col {
+        flex: 1 0 0%;
+      }
+
+        .card-with-inner-body {
+            .card-body {
+                padding: 15px;
+
+                .card-title {
+                    margin-bottom: 10px;
+                    font-size: 24px;
+                }
+            }
+
+            img {
+                height: 320px;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+      .col {
+        flex: 0 0 100%;
+      }
+      .goBack {
+        transform: rotate(180deg);
+      }
+        .container {
+            padding-left: 13.5px;
+            padding-right: 13.5px;
+        }
+        .card-with-inner-body img {
+            height: 230px;
+        }
+    }
+
+
+    @include media-breakpoint-between(lg, xl) {
+        .card-with-inner-body {
+            .btn-primary {
+                padding: 13px 40px 13px 20px;
+                background-position: right 15px center;
+            }
+        }
+    }
+}
+
+.mega-menu + .custom-mega-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega-menu {
+    span.text-primary {
+        transition: 0.2s all ease-in-out;
+    }
+
+    &.open {
+        span.text-primary {
+            transform: rotate(45deg);
+        }
+    }
+
+}
+
+
+
+.megamenu-tabs {
+    .nav-link {
+        text-align: left;
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding: 5px 0px;
+
+        &.active {
+            color: $secondary;
+            background-color: transparent;
+
+            span.position-relative {
+                padding-right: 10px;
+
+                &:before {
+                    content: "";
+                    width: 26px;
+                    height: 20px;
+                    background-image: url("/wp-content/themes/healthway/assets/images/btn-arrow-primary.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 26px;
+                    position: absolute;
+                    bottom: 7px;
+                    right: 0px;
+                    margin: auto;
+                    transform: translateX(100%);
+                }
+            }
+        }
+
+
+    }
+
+    .tab-content {
+        .tab-pane {
+            ul {
+                li a {
+                    display: block;
+                    margin-bottom: 5px;
+
+                    &:hover {
+                        color: $primary !important;
+                    }
+                }
+            }
+        }
+    }
+}

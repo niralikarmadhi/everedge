@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'DINCond';
+    src: url('DINCond-Black.eot');
+    src: url('DINCond-Black.eot?#iefix') format('embedded-opentype'),
+        url('DINCond-Black.woff2') format('woff2'),
+        url('DINCond-Black.woff') format('woff'),
+        url('DINCond-Black.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,30 @@
+
+
+
+
+.related--products{
+
+  &__slider{
+    .slide{
+      padding: 20px;
+    }
+  }
+
+  &__container{
+    padding: 0 30px;
+  }
+
+}
+
+
+.block--card{
+  position: relative;
+  &__body{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+  }
+
+}

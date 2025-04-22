@@ -1,0 +1,18 @@
+
+
+
+.block--image__content{
+
+  &--image{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+.block--image__content--slider__arrow{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
