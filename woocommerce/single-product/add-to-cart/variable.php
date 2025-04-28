@@ -41,9 +41,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 			<div class="variations" role="presentation">
 				<div>
-					<?php foreach ( $attributes as $attribute_name => $options ) : ?>
+					<?php  foreach ( $attributes as $attribute_name => $options ) : ?>
 						<div class="d-flex flex-lg-row flex-column justify-content-between align-items-start align-items-lg-center mt-4 pt-lg-2 pt-1">
-							<label class="text-xl text-primary me-lg-3 pb-1 pb-lg-0 text-start select-label uppercase wc-enhanced-select" for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label>
+							<!-- <label class="text-xl text-primary me-lg-3 pb-1 pb-lg-0 text-start select-label uppercase wc-enhanced-select" for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label> -->
 								<?php
 									wc_dropdown_variation_attribute_options(
 										array(
@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<div>
 					<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 						<div class="d-flex flex-lg-row flex-column justify-content-between align-items-start align-items-lg-center mt-4 pt-lg-2 pt-1">
-							<label class="text-xl text-primary me-lg-3 pb-1 pb-lg-0 text-start select-label uppercase wc-enhanced-select" for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label>
+							<!-- <label class="text-xl text-primary me-lg-3 pb-1 pb-lg-0 text-start select-label uppercase wc-enhanced-select" for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label> -->
 								<?php
 									wc_dropdown_variation_attribute_options(
 										array(

@@ -1,5 +1,5 @@
 <!-- footer -->
-<footer class="bg-primary text-secondary pt-4 pt-lg-0 mt-lg-0 mt-3 position-relative">
+<!-- <footer class="bg-primary text-secondary pt-4 pt-lg-0 mt-lg-0 mt-3 position-relative">
     <div class="container">
         <div class="d-flex flex-lg-row flex-column align-items-center w-100 text-xl pb-lg-1 mb-lg-2 mb-4 pb-2 justify-content-center text-lg-start text-center instagram-info">
             <?php if ($link = get_sub_field('link', 'options')) : ?>
@@ -98,8 +98,8 @@
                             <?php if ($twitter = get_sub_field('twitter', 'options')) : ?>
                                 <a href="<?php echo esc_html($twitter); ?>" class="me-3 transition d-inline-block" target="_blank">
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="21.003" height="17.068" viewBox="0 0 512 512">    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                        <path fill="#f2f4ff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21.003" height="17.068" viewBox="0 0 512 512"> 
+                                        <path fill="#f2f4ff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
                                     </svg>
                                 </a>
                             <?php endif; ?>
@@ -194,9 +194,9 @@
 
                     <?php if ($twitter = get_sub_field('twitter', 'options')) : ?>
                         <a href="<?php echo esc_html($twitter); ?>" class="me-3 transition d-inline-block" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="21.003" height="17.068" viewBox="0 0 512 512">    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                        <path fill="#f2f4ff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
-                                    </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21.003" height="17.068" viewBox="0 0 512 512">
+                                <path fill="#f2f4ff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                            </svg>
                         </a>
                     <?php endif; ?>
 
@@ -259,13 +259,11 @@
     <div class="container pb-4 pt-5 pt-lg-0">
 
         <?php wp_nav_menu($args = array(
-            'menu' => 'Footer',
             'menu_class'  => 'd-flex flex-wrap justify-content-lg-end align-items-center footer-menu-links mb-0 pb-lg-2 pb-3 ps-0',
             'container' => false,
             'link_class' => 'text-sm text-white font-sans',
         )); ?>
     </div>
-
     <div class="container ">
         <div class="row">
             <div class="col-lg-12 text-right">
@@ -273,12 +271,181 @@
             </div>
         </div>
     </div>
+</footer> -->
+<?php $footer_details = get_field('footer_details', 'options'); ?>
+<footer class="footer">
+    <?php if (!empty($footer_details)): ?>
+        <?php if (!empty($footer_details['footer_info'])):
+            $footer_info = $footer_details['footer_info'];
+        ?>
+            <div class="footer-info-sec" style="background: url('<?php echo get_template_directory_uri() ?>/assets/images/home/everedge-rust-min-min.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <?php foreach ($footer_info as $info): ?>
+                            <div class="col-lg-4">
+                                <div class="text-center">
+                                    <?php if (!empty($info['footer_icon'])): ?>
+                                        <div class="footer-icon mx-auto mb-3">
+                                            <img src="<?php echo $info['footer_icon']['url']; ?>" alt="icon" class="w-100 h-auto">
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if (!empty($info['footer_title'])): ?>
+                                        <div class="text-secondary fw-medium alt-font text-lg footer-info-title mb-2">
+                                            <?php echo $info['footer_title']; ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if (!empty($info['footer_description'])): ?>
+                                        <div class="text-secondary fw-normal text-sm alt-font col-lg-10 mx-auto footer-info-description">
+                                            <?php echo $info['footer_description']; ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+    <?php endif; ?>
 
+    <div class="bg-primary main-footer">
+        <div class="padding-top--105px"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <?php if (!empty($footer_details['footer_logo'])):
+                        $footer_logo = $footer_details['footer_logo'];
+                    ?>
+                        <div class="footer-logo mb-4 pb-2">
+                            <img src="<?php echo $footer_logo['url'] ?>" alt="footer logo" class="w-100">
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($footer_details['contact_details'])):
+                        $contact_details = $footer_details['contact_details'];
+                    ?>
+                        <div class="">
+                            <a href="mailto:<?php echo $contact_details['email']; ?>" class="text-secondary text-xl alt-font contact-detail"><?php echo $contact_details['email']; ?></a>
+                        </div>
+                        <div class="">
+                            <a href="tel:<?php echo $contact_details['contact']; ?>" class="text-secondary text-xl alt-font contact-detail"><?php echo $contact_details['contact']; ?></a>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($footer_details['social_links'])):
+                        $social_links = $footer_details['social_links'];
+                    ?>
+                        <div class="padding-top--60px"></div>
+                        <div class="d-flex">
+                            <?php foreach ($social_links as $s_link): ?>
+                                <div class="social-icon rounded-full me-2">
+                                    <a href="<?php echo $s_link['social_link'] ?>" class="h-100 w-100 d-flex align-items-center justify-content-center">
+                                        <img src="<?php echo $s_link['social_icon'] ?>" alt="">
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <?php if (!empty($footer_details['footer_other_logo'])):
+                    $footer_other_logo = $footer_details['footer_other_logo'];
+                ?>
+                    <div class="col-lg-3">
+                        <div class="experience-logo mx-auto">
+                            <img src="<?php echo $footer_other_logo['experience_logo'] ?>" alt="experience_logo" class="w-100 h-auto">
+                        </div>
+                        <div class="padding-top--65px"></div>
+
+                        <div class="made-in-logo mx-auto">
+                            <img src="<?php echo $footer_other_logo['made_in_logo'] ?>" alt="made_in_logo" class="w-100 h-auto">
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($footer_details['footer_links'])):
+                    $footer_links = $footer_details['footer_links'];
+                ?>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <?php
+                            if (!empty($footer_links)):
+                                foreach ($footer_links as $f_links):
+                                    $links = $f_links['links'];
+                            ?>
+                                    <div class="col-lg-4">
+                                        <?php if (!empty($f_links['title'])): ?>
+                                            <div class="text-secondary text-base footer-link mb-3 half--opacity alt-font">
+                                                <?php echo $f_links['title'] ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php foreach ($links as $f_link): ?>
+                                            <?php if (!empty($f_link['link'])): ?>
+                                                <div class="">
+                                                    <a href="<?php echo $f_link['link']['url'] ?>" target="<?php echo $f_link['link']['target'] ?>" class="text-secondary text-base footer-link alt-font">
+                                                        <?php echo $f_link['link']['title'] ?>
+                                                    </a>
+                                                </div>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                            <?php
+                                endforeach;
+                            endif;
+                            ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <div class="padding-top--100px"></div>
+            <div class="border-seconady"></div>
+            <div class="padding-top--30px"></div>
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="text-secondary text-xs alt-font fw-normal ft-content">
+                    <?php if (!empty($footer_details['footer_year'])):
+                        $footer_year = $footer_details['footer_year'];
+                    ?>
+                    <span class="fw-bold">
+                        <?php echo $footer_year ?>
+                    </span>
+                    <?php endif; ?>
+                    <?php if (!empty($footer_details['website_by'])):
+                        $website_by = $footer_details['website_by'];
+                    ?>
+                        <?php echo $website_by ?>
+                    <?php endif; ?>
+                </div>
+                <div class="d-flex align-items-center">
+                    <?php if (!empty($footer_details['policy_links'])):
+                        $policy_links = $footer_details['policy_links'];
+                    ?>
+                        <div class="d-flex">
+                            <?php foreach ($policy_links as $p_link): ?>
+                                <div class="me-4">
+                                    <a href="<?php echo $p_link['link']['url'] ?>" target="<?php echo $p_link['link']['target'] ?>" class="text-secondary text-xs alt-font fw-normal ft-content"><?php echo $p_link['link']['title'] ?></a>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($footer_details['payment_icons'])):
+                        $payment_icons = $footer_details['payment_icons'];
+                    ?>
+                        <div class="d-flex">
+                            <?php foreach ($payment_icons as $p_icons): ?>
+                                <div class="ms-2 pay-icon">
+                                    <img src="<?php echo $p_icons['icon'] ?>" alt="icon" class="h-100 w-auto">
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+
+                </div>
+            </div>
+            <div class="padding-top--30px"></div>
+
+        </div>
+    </div>
 </footer>
 
 
 <script>
-    jQuery(function ($) {
+    jQuery(function($) {
         function is_checkout_page() {
             return $('body').hasClass('woocommerce-checkout');
         }
@@ -288,11 +455,11 @@
                 return; // Exit if not on the checkout page
             }
 
-            var shipping_country  = $('#shipping_country').val();
-            var shipping_state    = $('#shipping_state').val();
+            var shipping_country = $('#shipping_country').val();
+            var shipping_state = $('#shipping_state').val();
             var shipping_postcode = $('#shipping_postcode').val();
-            var shipping_city     = $('#shipping_city').val();
-            var shipping_address  = $('#shipping_address_1').val();
+            var shipping_city = $('#shipping_city').val();
+            var shipping_address = $('#shipping_address_1').val();
             var shipping_address2 = $('#shipping_address_2').val();
 
             // Check if billing fields are empty and fill them
@@ -323,6 +490,4 @@
             $(document).ready(autofill_billing_address);
         }
     });
-
-
 </script>

@@ -126,6 +126,13 @@ button,
   &.btn-lg {
     min-width: 209px !important;
   }
+
+  &.primary-btn{
+    padding: 12px 20px;
+    border: 1px solid $primary !important;
+    font-size:14px;
+    line-height: 18px;
+  }
 }
 
 .btn-primary-bg {

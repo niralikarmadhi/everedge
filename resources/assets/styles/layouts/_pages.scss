@@ -550,8 +550,8 @@
     -webkit-appearance:none; /* Safari and Chrome */
     background-image: url('/wp-content/themes/curious_boilerplate/assets/images/icons/grouped-dropdown-arrow-down.svg'); 
     background-repeat: no-repeat;
-    background-position: calc(100% - 6px) center;
-    background-size: 45px;
+    background-position: calc(100% - 20px) 50%;
+    background-size: 12px;
 
     @include media-breakpoint-down(lg) {
         width: 100%;

@@ -18,10 +18,16 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+global $product;
 
 ?>
+
 <div class="col-lg-5 product-info-block">
-                <div class="col-lg-9 mx-auto d-flex flex-column justify-content-center h-100 fw-semibold pt-4 pt-lg-0 mt-3 mt-lg-0">
+    <div class="col-lg-10 ms-auto d-flex flex-column h-100 fw-semibold pt-4 pt-lg-0 mt-3 mt-lg-0">
+        <div class="d-flex">
+            <div class=""><?php if($product->is_in_stock()): ?> in Stock <?php else: ?> Out of stock <?php endif; ?> </div>
+            <div class=""><?php if ( get_field( 'is_root_product' ) ) : ?> Trad only <?php endif; ?></div>
+        </div>
 
 <?php 
 

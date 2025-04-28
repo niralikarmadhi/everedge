@@ -331,3 +331,9 @@ body .centeredButton {
     padding-inline: 8px;
   }
 }
+.row6{
+  margin-inline: -6px;
+  &>*{
+    padding-inline: 6px;
+  }
+}

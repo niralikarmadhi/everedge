@@ -29,7 +29,6 @@ if (!$short_description) {
 }
 
 ?>
-
 <div class="col-lg-10">
     <div class="mb-3 text-sm fw-light font-sans text-gray short-description">
         <?php echo $short_description; // WPCS: XSS ok. 
@@ -136,6 +135,20 @@ if (!$short_description) {
 </ul>
 
 
-<?php if (! have_rows( 'alternate_products' ) ) : ?>
-<div class="border-bottom"></div>
+<?php if (! have_rows('alternate_products')) : ?>
+    <div class="border-bottom"></div>
+<?php endif; ?>
+
+<?php if (have_rows('product_alternative_details')): ?>
+    <?php while (have_rows('product_alternative_details')) :  the_row();
+        $product_description_list = get_sub_field('product_description_list');
+    ?>
+        <?php if (!empty($product_description_list)): ?>
+            <?php foreach ($product_description_list as $product_list): ?>
+                <?php if (!empty($product_list['list'])): ?>
+                    <div class=""> <?php echo $product_list['list']; ?> </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    <?php endwhile; ?>
 <?php endif; ?>

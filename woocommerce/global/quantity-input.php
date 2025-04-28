@@ -36,7 +36,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 
 ?>
 
-<div class="quantity">
+<div class="quantity w-100">
 	<?php
 	/**
 	 * Hook to output something before the quantity input field.
@@ -46,7 +46,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 	do_action( 'woocommerce_before_quantity_input_field' );
 	?>
 	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
-	<input
+	<!-- <input
 		type="<?php echo esc_attr( $type ); ?>"
 		<?php echo $readonly ? 'readonly="readonly"' : ''; ?>
 		id="<?php echo esc_attr( $input_id ); ?>"
@@ -63,7 +63,21 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 			inputmode="<?php echo esc_attr( $inputmode ); ?>"
 			autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
 		<?php endif; ?>
-	/>
+	/> -->
+
+	<select
+	id="<?php echo esc_attr( $input_id ); ?>"
+		class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
+		name="<?php echo esc_attr( $input_name ); ?>"
+		value="<?php echo esc_attr( $input_value ); ?>"
+		title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ); ?>"
+	>
+		<?php for ( $i = 1; $i <= 6; $i++ ) : ?>
+			<option value="<?php echo $i; ?>" <?php selected( (int) $input_value, $i ); ?>>
+				<?php echo $i; ?>
+			</option>
+		<?php endfor; ?>
+	</select>
 	<?php
 	/**
 	 * Hook to output something after quantity input field

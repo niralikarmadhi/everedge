@@ -3,17 +3,17 @@
 
   <?php if (get_field('enable_notification_banner', 'option') == 1) : ?>
 
-      <div class="notification--header bg-primary p-2">
+      <div class="notification--header bg-black p-2 ">
 
         <?php if ( $notification_banner_text = get_field( 'notification_banner_text', 'options' ) ) : ?>
-        <div class="notification-slider align-items-center">
+        <div class="notification-slider align-items-center font-body">
 
             <div class="pt-1">
               <?php the_field('notification_banner_text', 'option'); ?>
             </div>
 
           <!-- TrustBox widget - Micro Review Count -->
-          <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="4be3609c0000640005089ea0" data-style-height="24px" data-style-width="100%" data-theme="dark" data-style-alignment="center">
+          <div class="trustpilot-widget " data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="4be3609c0000640005089ea0" data-style-height="24px" data-style-width="100%" data-theme="dark" data-style-alignment="center">
             <a href="https://uk.trustpilot.com/review/www.everedge.co.uk" target="_blank" rel="noopener">Trustpilot</a>
           </div>
           <!-- End TrustBox widget -->
@@ -23,7 +23,7 @@
         <?php else: ?>
 
           <!-- TrustBox widget - Micro Review Count -->
-          <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="4be3609c0000640005089ea0" data-style-height="24px" data-style-width="100%" data-theme="dark" data-style-alignment="center">
+          <div class="trustpilot-widget font-body" data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="4be3609c0000640005089ea0" data-style-height="24px" data-style-width="100%" data-theme="dark" data-style-alignment="center">
             <a href="https://uk.trustpilot.com/review/www.everedge.co.uk" target="_blank" rel="noopener">Trustpilot</a>
           </div>
           <!-- End TrustBox widget -->
@@ -242,7 +242,7 @@
                     <div class="container h-100  mob-container">
                       <!-- our megamenu  -->
                       <div class="row d-block d-lg-flex megamenu-nav">
-                        <div class="col-12 col-md-3 d-flex justify-content-center flex-column align-items-start h-100">
+                        <!-- <div class="col-12 col-md-3 d-flex justify-content-center flex-column align-items-start h-100">
 
                           <ul class="p-0 m-0 d-flex flex-column h-100">
                             <?php
@@ -283,9 +283,9 @@
                               </div>
                             </div>
                           </a>
-                        </div>
+                        </div> -->
 
-                        <div class="col-12 col-md-9  h-100 overflow-auto mega-menu-result px-0">
+                        <div class="col-12 h-100 overflow-auto mega-menu-result px-0">
                           <!-- Mobile menu open logo -->
                           <div class="mob-container d-flex d-lg-none justify-content-between align-items-center">
                             <a href="#" class="d-block d-lg-none py-0 text-capitalize menu-open-logo">
@@ -365,7 +365,7 @@
 
 
                                     ?>
-                                        <div class="col-6 col-md-6 col-lg-3 px-lg-2 px-1">
+                                        <div class="col-6 col-md-6 col-lg-2 px-lg-2 px-1">
                                           <a href="<?php echo get_the_permalink($postID); ?>" class="position-relative card-hover w-100">
                                             <div class="header-menu-img overflow-hidden position-relative">
                                               <img src="<?php echo $postThumbnail; ?>" alt="<?php echo get_the_title($postID); ?>" class="object-cover w-100 h-100">

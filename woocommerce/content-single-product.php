@@ -45,7 +45,8 @@ do_action( 'woocommerce_before_single_product_summary' );
 ?>
 
 <div class="summary entry-summary col-lg-5 product-info-block">
-<div class="col-lg-9 mx-auto d-flex flex-column justify-content-center h-100 pt-4 pt-lg-0 mt-3 mt-lg-0">
+
+<div class="col-lg-10 ms-auto d-flex flex-column justify-content-center h-100 pt-4 pt-lg-0 mt-3 mt-lg-0">
 	<?php
 	/**
 	 * Hook: woocommerce_single_product_summary.
