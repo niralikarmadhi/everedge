@@ -142,11 +142,22 @@ if (!$short_description) {
 <?php if (have_rows('product_alternative_details')): ?>
     <?php while (have_rows('product_alternative_details')) :  the_row();
         $product_description_list = get_sub_field('product_description_list');
+        $read_more_content = get_sub_field('read_more_content');
     ?>
         <?php if (!empty($product_description_list)): ?>
             <?php foreach ($product_description_list as $product_list): ?>
                 <?php if (!empty($product_list['list'])): ?>
                     <div class=""> <?php echo $product_list['list']; ?> </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+        <?php if (!empty($read_more_content)): ?>
+            <?php foreach ($read_more_content as $read_content): ?>
+                <?php if (!empty($read_content['title'])): ?>
+                    <div class=""> <?php echo $read_content['title']; ?> </div>
+                <?php endif; ?>
+                <?php if (!empty($read_content['description'])): ?>
+                    <div class=""> <?php echo $read_content['description']; ?> </div>
                 <?php endif; ?>
             <?php endforeach; ?>
         <?php endif; ?>
